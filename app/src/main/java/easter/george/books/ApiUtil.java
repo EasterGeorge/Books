@@ -72,7 +72,7 @@ public class ApiUtil {
         final String PUBLISHED_DATE = "publishedDate";
         final String ITEMS = "items";
         final String VOLUMEINFO = "volumeInfo";
-        ArrayList<Book> books=null;
+        ArrayList<Book> books = new ArrayList<Book>();
         try {
             JSONObject jsonBooks = new JSONObject(json);
             JSONArray arrayBooks = jsonBooks.getJSONArray(ITEMS);
