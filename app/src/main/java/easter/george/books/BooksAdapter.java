@@ -80,11 +80,10 @@ public class BooksAdapter
         public void onClick(View view) {
             int position = getAdapterPosition();
             Log.d("Click", String.valueOf(position));
-            //gets the book from the arrayList
             Book selectedBook = books.get(position);
-            //Intent intent = new Intent(view.getContext(), BookDetail.class);
-            //intent.putExtra("Book", selectedBook);
-            //view.getContext().startActivity(intent);
+            Intent intent = new Intent(view.getContext(), BookDetailActivity.class);
+            intent.putExtra("Book", selectedBook);
+            view.getContext().startActivity(intent);
         }
     }
 }
